@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE2 Module Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div style="text-align:center">
+        <h2>Image Gallery</h2>
+        <p>Click on the images below:</p>
+      </div>
+
+    <!-- Images with Flex Box -->
+    <div class="flex-container">
+        <div class="column">
+            <button id="img-1" onclick="openFormFunction()"><img class="img" src="img_lights.jpg" alt="img1"></button>
+            <div class="desc">1.Lights</div>
+        </div>
+
+        <div class="column">
+            <button id="img-2" onclick="displayFormInfoFunction()"><img class="img" src="img_mountains.jpg"
+                    alt="img2"></button>
+                    <div class="desc">2.Mountains</div>
+        </div>
+
+        <div class="column">
+            <button id="img-3" onclick="displayDiceWthScore()"><img class="img" src="nature.jpg" alt="img3"></button>
+            <div class="desc">3.Nature</div>
+        </div>
+
+        <div class="column">
+            <button id="img-4" onclick="generateCouponCodeFunction()"><img class="img" src="snow.jpg"
+                    alt="img4"></button>
+                    <div class="desc">4.Snow</div>
+        </div>
+    </div>
+
+    <!-- Form Group -->
+    <div class="form-Group hidden" id="form">
+        <fieldset>
+            <legend>Signup</legend>
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" required>
+        <br> <br>
+        <label for="userName">User Name: </label><br>
+        <input type="text" id="userName" required>
+        <br> <br>
+
+        <label for="email">Email: </label><br>
+        <input type="email" id="email" required>
+        <br> <br>
+
+        <button id="sumbitBtn" type="submit" onclick="submitFormInfoFunction()">Submit</button>
+    </fieldset>
+    </div>
+
+    <!-- Display Form info -->
+    <div class="displayformInfo hidden" id="displayInfo">
+        <h2>Your information is</h2><br>
+        <span id="info"></span><br><br>
+        <p>Click on next Image to proceed further</p>
+    </div>
+
+    <!-- dice image with score and attempts -->
+    <div class="diceWthScore hidden" id="diceWthScore">
+        <p>Attempts left : <span id="attemptsLeft">0</span></p><br>
+        <div>
+            <button id="dice-Image" onclick="diceClick()"><img class="img" src="dice.jpg"
+                    alt="diceImage"></button><br><br>
+            <p>Remaining Dice Clicks: <span id="diceClicks">3</span></p>
+            <p>Your total score is: <span id="score">0</span></p>
+        </div>
+    </div>
+
+    <!-- Congratulations and try again Image -->
+    <div>
+        <img class="hidden" id="congratsImage" src="congrats.gif" alt="congratsImage">
+    </div>
+    <div>
+        <img class="hidden" id="tryAgainImage" src="try.jpg" alt="tryAgainImage">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
